@@ -6,7 +6,7 @@ echo "Hello there!"
 if [ -z "$OPENAI_API_KEY" ]; then
     echo ""
     echo "======================"
-    echo "|> OPEN_API_KEY environment variable is not yet set."
+    echo "|> OPENAI_API_KEY environment variable is not yet set."
     echo "|> Please come back as you set it."
     echo "======================"
     echo ""
