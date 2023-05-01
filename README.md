@@ -7,6 +7,7 @@ This repository contains a Python script (`summarize.py`) and a Bash script (`ru
 - Python 3.x
 - An OpenAI API key
 - Python packages: `openai` and `click`
+- Paid OpenAI plan
 
 ## Installation
 

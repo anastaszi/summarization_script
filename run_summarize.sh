@@ -36,9 +36,9 @@ if ! pip3 freeze | grep -q "click"; then
 fi
 
 # Default settings
-TOKENS="100"
+TOKENS="500"
 TEMPERATURE="0.5"
-MODEL="text-davinci-002"
+MODEL="text-davinci-003"
 
 # Parse command line arguments for input file, tokens, temperature, and model
 UPDATE_SETTINGS=""
@@ -98,10 +98,10 @@ if [ "$UPDATE_SETTINGS" = "" ]; then
         for setting in "${SETTINGS_TO_UPDATE[@]}"; do
             case $setting in
                 1)
-                    echo "Enter the number of tokens (1-200):"
+                    echo "Enter the number of tokens (1-2000):"
                     read -r TOKENS
-                    if ! [[ $TOKENS =~ ^[1-9][0-9]{0,2}$ ]] || ((TOKENS > 200)); then
-                        echo "Invalid input. Number of tokens must be between 1 and 200."
+                    if ! [[ $TOKENS =~ ^[1-9][1-9][0-9]{0,2}$ ]] || ((TOKENS > 2001)); then
+                        echo "Invalid input. Number of tokens must be between 1 and 2000."
                         exit 1
                     fi
                     ;;
@@ -115,7 +115,7 @@ if [ "$UPDATE_SETTINGS" = "" ]; then
                     ;;
                 3)
                     echo "Choose a model from the list:"
-                    echo "1. text-davinci-002"
+                    echo "1. text-davinci-003"
                     echo "2. text-curie-002"
                     echo "3. text-babbage-002"
                     echo "4. text-ada-002"
