@@ -14,7 +14,7 @@ This repository contains a Python script (`summarize.py`) and a Bash script (`ru
 1. Clone the repository:
 
 ```
-git clone https://github.com/yourusername/text-summarization.git
+git clone https://github.com/anastaszi/text-summarization.git
 cd text-summarization
 ```
 
